@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What's the best strategy when playing HORSE?"
-date:   2020-12-19 00:00:00 -0800
+date:   2020-12-25 00:00:00 -0800
 ---
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
