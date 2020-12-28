@@ -20,7 +20,7 @@ date:   2020-12-25 00:00:00 -0800
 The version of HORSE I'm analysing here involves two players. In the beginning, it's Player 1's turn. The player whose turn it is will be called "C", and the other player will be called "O".
 1. C picks a spot on the basketball court and attempts a shot.
   * If C misses the shot, it is O's turn, and we go back to 1.
-2. If C makes shot, O now attempt the same shot.
+2. If C makes the shot, O must now attempt the same shot.
   * If O makes the shot, C's turn continues, and we go back to 1.
   * If O misses the shot, they get a letter. C's turn continues, and we go back to 1.
 3.  Once any player has gotten 5 letters, ie HORSE, they lose the game.
