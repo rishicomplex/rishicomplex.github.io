@@ -17,12 +17,12 @@ date:   2020-12-25 00:00:00 -0800
 {:toc}
 
 ### Game rules
-The version of HORSE I'm analysing here involves two players. In the beginning, it's Player 1's turn.
-1. The player who's turn it is picks a spot on the basketball court and attempts a shot.
-  * If the player misses the shot, it is the other player's turn, and we go back to 1.
-2. If the player makes the shot, the other player must now attempt the same shot.
-  * If they make the shot, the first player's turn continues, and we go back to 1.
-  * If the player misses the shot, they get a letter. The first player's turn continues, and we go back to 1.
+The version of HORSE I'm analysing here involves two players. In the beginning, it's Player 1's turn. The player whose turn it is will be called "C", and the other player will be called "O".
+1. C picks a spot on the basketball court and attempts a shot.
+  * If C misses the shot, it is O's turn, and we go back to 1.
+2. If C makes shot, O now attempt the same shot.
+  * If O makes the shot, C's turn continues, and we go back to 1.
+  * If O misses the shot, they get a letter. C's turn continues, and we go back to 1.
 3.  Once any player has gotten 5 letters, ie HORSE, they lose the game.
 
 On Player 2's turn, Player 1 has no real strategy - they must simply try their best to make the shots that Player 2 makes. The only strategy a player can control is which shots they attempt when it's their turn.
@@ -31,9 +31,9 @@ On Player 2's turn, Player 1 has no real strategy - they must simply try their b
 
 #### Deriving the formula
 
-Let us calculate the optimal shot on Player 1's turn. We will assume that Player 1 will shoot the same optimal shot each time it is their turn. Let $$p_1$$ be the probability that Player 1 makes this shot, $$p_2$$ be the probability that Player 2 makes the same shot, and $$e_N$$ be the expected number of turns for Player 1 to win $$N$$ letters.
+Let us calculate the optimal shot on Player 1's turn. Note that a "turn" lasts as long as the player whose turn it is does not miss their shot. We will assume that Player 1 will shoot the same optimal shot each time it is their turn. Let $$p_1$$ be the probability that Player 1 makes this shot, $$p_2$$ be the probability that Player 2 makes the same shot, and $$e_N$$ be the expected number of turns for Player 1 to win $$N$$ letters.
 
-If Player 1 misses the shot, the expected number of turns going forward is $$1 + e_N$$, since Player 1 has used the up the current turn, and must restart in the same position next turn. If Player 1 makes the shot, and Player 2 misses the shot, the expected number of turns is $$e_{N-1}$$, since the turn continues with one less letter to win. Finally, if Player 1 and Player 2 both make the shot, the expected number of turns is simply $$e_N$$. Putting these together, we have
+If Player 1 misses the shot, the expected number of turns going forward is $$1 + e_N$$, since Player 1 has used up the current turn, and must restart in the same position next turn. If Player 1 makes the shot, and Player 2 misses the shot, the expected number of turns is $$e_{N-1}$$, since the turn continues with one less letter to win. Finally, if Player 1 and Player 2 both make the shot, the expected number of turns is simply $$e_N$$. Putting these together, we have
 
 $$
 \begin{equation}
@@ -147,4 +147,4 @@ This should reduce the effectiveness of the layup strategy and make the game mor
 ---
 
 \\
-The code for the plots in this posts is [here](https://colab.research.google.com/drive/18yF27zs80UF9TgFm4p7I5U4cDYn1V6A3?usp=sharing).
+The code for the plots in this post is [here](https://colab.research.google.com/drive/18yF27zs80UF9TgFm4p7I5U4cDYn1V6A3?usp=sharing).
