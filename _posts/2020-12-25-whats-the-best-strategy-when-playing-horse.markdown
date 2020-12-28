@@ -102,7 +102,7 @@ To minimize this, we should pick shots with a $$p_1$$ as high as possible. For e
 
 #### Player 1 is a slightly better shooter than Player 2
 
-Let's say Player 1 always shoots 10% better than Player 2 for any shot. That is, $$p_2 = min(p_1 - 0.1, 0)$$, and when $$p1>0.1$$, $$\eqref{eq:one}$$ simplifies to
+Let's say Player 1 always shoots 10% better than Player 2 for any shot. That is, $$p_2 = min(p_1 - 0.1, 0)$$ (yellow line above), and when $$p1>0.1$$, $$\eqref{eq:one}$$ simplifies to
 
 $$
 e_5 = 1 + 5 \frac{1 - p_1}{p_1 (1.1 - p_1)}
@@ -116,7 +116,7 @@ It is minimized at $$p_1=1$$, where $$e_5=1$$, that is, the game ends in one tur
 
 #### Player 2 is a slightly better shooter than Player 1
 
-Here, we set $$p_2 = p_1 + 0.1$$, which gives us for $$p_1 < 0.9$$
+Here, we set $$p_2 = p_1 + 0.1$$ (orange line above), which gives us for $$p_1 < 0.9$$
 
 $$
 e_5 = 1 + 5 \frac{1 - p_1}{p_1 (0.9 - p_1)}
@@ -126,7 +126,7 @@ In the range $$p_1 \in [0, 1]$$, this function looks like this:
 
 ![Player 1 worse](/assets/player_1_worse.png)
 
-Interestingly, we cannot simply maximize $$p_1$$ here, because once $$p_2$$ gets closer to $$1$$, we can never win. However, the optimal $$p_1$$ is still pretty high, at around $$p_1=0.684$$, giving $$e_5=11.7$$. If Player 2 (for whom $$e_5$$ looks like the previous section) shoots shots at $$p_2<0.4$$, they will lose the game, despite being a better shooter.
+Interestingly, we cannot simply maximize $$p_1$$ here, because once $$p_2$$ gets closer to $$1$$, we can never win. However, the optimal $$p_1$$ is still pretty high, at around $$p_1=0.684$$, giving $$e_5=11.7$$. If Player 2 (for whom $$e_5$$ looks like the previous section) shoots shots at $$p_2<0.4$$ (eg three-point shots), they will lose the game, despite being a better shooter.
 
 ### Real world strategies
 
@@ -143,3 +143,8 @@ I'd also recommend playing HORSE with modified rules, eg
 * If both players make three shots in a row, it's Player 2's turn.
 
 This should reduce the effectiveness of the layup strategy and make the game more fun.
+
+---
+
+\\
+The code for the plots in this posts is [here](https://colab.research.google.com/drive/18yF27zs80UF9TgFm4p7I5U4cDYn1V6A3?usp=sharing).
