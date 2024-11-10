@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    <div class="container">
+      <aside class="sidebar">
+        <div class="profile">
+          <img src="/assets/comic.jpg" alt="Rishi">
+          <div class="profile-info">
+            <h2>Rishi Mehta</h2>
+            <!-- Links and tags -->
+            <div class="links">
+              <a href="{{ site.baseurl }}/">Blog</a>
+              <a href="{{ site.baseurl }}/about">About</a>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/rishicomplex" target="_blank" aria-label="GitHub">
+                <svg class="icon">
+                  <use xlink:href="/assets/minima-social-icons.svg#github"></use>
+                </svg>
+              </a>
+              <a href="https://linkedin.com/in/rishicomplex" target="_blank" aria-label="LinkedIn">
+                <svg class="icon">
+                  <use xlink:href="/assets/minima-social-icons.svg#linkedin"></use>
+                </svg>
+              </a>
+              <a href="https://twitter.com/rishicomplex" target="_blank" aria-label="Twitter">
+                <svg class="icon">
+                  <use xlink:href="/assets/minima-social-icons.svg#twitter">
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+          {{ content }}
+        </div>
+      </main>
+    </div>
+
+  </body>
+
+</html>

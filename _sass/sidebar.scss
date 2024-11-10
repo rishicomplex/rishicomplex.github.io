@@ -1,0 +1,103 @@
+/* Sidebar */
+.container {
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full height of the viewport */
+    width: 250px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    overflow-y: auto; /* Adds scrolling to the sidebar itself if its content overflows */
+
+}
+
+.sidebar .profile {
+    text-align: center;
+}
+
+.sidebar img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.page-content {
+    margin-left: 270px; /* Space for the sidebar */
+    padding: 20px;
+    flex: 1;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor; /* Inherit color from the parent link */
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.social-links a {
+    color: #333; /* Default color */
+}
+
+.social-links a:hover {
+    color: #0077b5; /* Change to LinkedIn blue on hover, for example */
+}
+
+/* Responsive design for mobile */
+@include media-query($on-palm) {
+    .container {
+        flex-direction: column; /* Stacks sidebar and content vertically */
+    }
+
+    .sidebar {
+        position: relative; /* Remove fixed positioning on mobile */
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 20px; /* Add space between sidebar and main content */
+        height: auto; /* Sidebar height adapts to content on mobile */
+    }
+
+    .sidebar .profile {
+        display: flex;
+        align-items: center;
+        gap: 15px; /* Space between the image and profile info */
+        justify-content: center;
+        text-align: left;
+    }
+
+    .sidebar img {
+        width: 80px; /* Smaller image size for mobile */
+        height: 80px;
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align text and links to the left */
+    }
+
+    .page-content {
+        margin-left: 0; /* Reset margin on mobile */
+        width: 100%; /* Full width on mobile */
+        padding: 15px;
+    }
+
+    .social-links {
+        justify-content: flex-start; /* Align social icons to the left */
+        margin-top: 8px;
+    }
+}
