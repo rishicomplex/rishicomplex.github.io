@@ -13,6 +13,8 @@ date:   2020-12-25 00:00:00 -0800
 \\
 [HORSE](https://en.wikipedia.org/wiki/Variations_of_basketball#H-O-R-S-E) is a popular basketball shooting game. The main choice a HORSE player must make is which spots on the basketball court to attempt shots from. What's the best strategy to win at HORSE?
 
+<!--more-->
+
 * TOC
 {:toc}
 

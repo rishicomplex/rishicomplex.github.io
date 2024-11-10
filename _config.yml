@@ -29,8 +29,12 @@ github_username:  rishicomplex
 
 # Build settings
 theme: minima
+show_excerpts: true
+excerpt_separator: "<!--more-->"
+
 plugins:
   - jekyll-feed
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
