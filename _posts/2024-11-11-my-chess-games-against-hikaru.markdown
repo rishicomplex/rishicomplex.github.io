@@ -20,7 +20,7 @@ He hits me with the [Bongcloud](https://en.wikipedia.org/wiki/Bongcloud_Attack).
 
 Can't complain - that went as well as it could've gone. Here's what chess.com thought of the game.
 
-<img src="/assets/hikaru-review.png" alt="review" width="400">
+<img src="/assets/hikaru-review.png" alt="review" width="400" style="display: block; margin: auto;">
 
 <br>
 
@@ -32,4 +32,4 @@ I got to play him a second time a couple months later, though that game was pret
 
 Hikaru's been my favorite chess player for a decade now! I actually got to meet him at a blitz tournament in Paris in 2016.
 
-<img src="/assets/hikaru-selfie.jpg" alt="selfie" width="300">
+<img src="/assets/hikaru-selfie.jpg" alt="selfie" width="300" style="display: block; margin: auto;">
