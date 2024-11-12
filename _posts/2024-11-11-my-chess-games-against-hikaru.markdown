@@ -4,7 +4,7 @@ title:  "My chess games against Hikaru"
 date:   2024-11-11 00:00:00
 ---
 
-I was backing up my drive to switch laptops recently and I came across a screengrab of a chess game I played against Hikaru Nakamura. This was in January 2020, back when he had yet to blow up into a [giant streamer](https://www.youtube.com/GMHikaru). As I recall I was one of around 100 subscribers on Twitch. He would occasionally play his subscribers on stream, and this was my lucky day. 
+I was backing up my drive to switch laptops recently and I came across a screengrab of a chess game I played against Hikaru Nakamura. This was in January 2020, back when he had yet to blow up into a [giant streamer](https://www.youtube.com/GMHikaru). As I recall, I was one of a handful of subscribers on his Twitch channel. He would occasionally play his subscribers on stream, and this was my lucky day. 
 <!--more-->
 Here's the footage from his stream.
 
