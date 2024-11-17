@@ -91,7 +91,7 @@ holds for all integers $n \geq N$.
 AlphaProof correctly proposes that $(1, 1)$ is the only solution. To show that no other solution can work, it asks us to consider the number $ab + 1$. It claims (and later proves) that $ab + 1$ must divide $g$.
 
 {% highlight lean %}
-have:b.1+b.2∣Y:=?_
+suffices:b.1*b.2+1∣Y
 {% endhighlight %}
 
 Note that in its infinite wisdom, AlphaProof decides to rename pairs $(a, b)$ to `b`, so that it must reference the elements as `b.1` and `b.2`. It has also chosen, for reasons best known to itself, to rename the variable $g$ to `Y`.
