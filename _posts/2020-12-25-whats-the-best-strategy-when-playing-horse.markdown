@@ -6,14 +6,15 @@ date:   2020-12-25 00:00:00 -0800
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
+
+[HORSE](https://en.wikipedia.org/wiki/Variations_of_basketball#H-O-R-S-E) is a popular basketball shooting game. The main choice a HORSE player must make is which spots on the basketball court to attempt shots from. What's the best strategy to win at HORSE?
+
+<!--more-->
+
 **TL;DR**: If you want to win at HORSE, it's generally a much better strategy to attempt high percentage shots. It almost never makes sense to shoot crazy half-court shots or behind-the-back shots. As a general rule of thumb, never attempt shots that you can't shoot at >50%.
 
 ---
 
-\\
-[HORSE](https://en.wikipedia.org/wiki/Variations_of_basketball#H-O-R-S-E) is a popular basketball shooting game. The main choice a HORSE player must make is which spots on the basketball court to attempt shots from. What's the best strategy to win at HORSE?
-
-<!--more-->
 
 * TOC
 {:toc}
