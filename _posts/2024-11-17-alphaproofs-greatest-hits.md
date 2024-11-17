@@ -141,7 +141,7 @@ $$
 specialize V $ λ N=>-N+2 *Int.ceil N
 {% endhighlight %}
 
-It then shows that $f(-1) + f(1) = 0$ and $f(1/2) = f(-1/2) = 2$, which gives us the two distinct values we need.
+It then shows that $f(-1) + f(1) = 0$ and $f(1/2) + f(-1/2) = 2$, which gives us the two distinct values we need.
 
 {% highlight lean %}
 use Finset.one_lt_card.2$ by exists@0,V.1.mem_toFinset.2 (by exists-1),2,V.1.mem_toFinset.2 (by exists 1/2)
