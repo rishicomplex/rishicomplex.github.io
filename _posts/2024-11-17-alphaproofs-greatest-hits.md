@@ -14,7 +14,7 @@ MathJax.Hub.Config({
 });
 </script>
 
-Here I'll try to explain the coolest ideas in each of [AlphaProof](https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/)'s IMO 2024 solutions. AlphaProof produces proofs in [Lean](https://leanprover.github.io/), and each Lean proof is composed of a series of tactics. So I'll pick out the tactics that correspond to these ideas in the proofs for problems 1, 2 and 4. AlphaProof has developed its own proving style, so figuring out what it's doing can involve some detective work.
+Here I'll try to explain the coolest ideas in each of [AlphaProof](https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/)'s IMO 2024 solutions. AlphaProof produces proofs in [Lean](https://leanprover.github.io/), and each Lean proof is composed of a series of tactics. So I'll pick out the tactics that correspond to these ideas in the proofs for problems 1, 2 and 6 (the three problems that AlphaProof solved). AlphaProof has developed its own proving style, so figuring out what it's doing can involve some detective work.
 
 <!--more-->
 
