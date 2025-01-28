@@ -10,7 +10,16 @@ I've written a little Chrome extension to compare responses from different LLMs 
 
 I've found myself frequently copy-pasting queries between different chatbots. [Chorus](https://chromewebstore.google.com/detail/chorus-compare-llms/opedkjbjehljdkjahbingfncglipdeif) automates this. You can type `ch` `Space` in the omnibar, write your prompt, and hit `Enter`. Chorus will create a tab group and send your prompt to all the enabled models.
 
-![Chorus demo](/assets/chorus.gif)
+<br>
+
+<div style="text-align: center;">
+  <video autoplay muted playsinline loop style="max-width: 100%;">
+    <source src="/assets/chorus_demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<br>
 
 The extension currently supports Claude, ChatGPT, Gemini and DeepSeek, and also lets you send your query to some search engines (Google, Perplexity).
 
