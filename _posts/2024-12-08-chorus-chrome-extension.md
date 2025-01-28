@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Chorus: A Chrome extension to compare LLMs"
-date:   2024-12-08 00:00:00 -0800
+date:   2025-01-28 00:00:00 -0800
 ---
 
 I've written a little Chrome extension to compare responses from different LLMs in their native browser UI. You can try it out in the Chrome web store [here](https://chromewebstore.google.com/detail/chorus-compare-llms/opedkjbjehljdkjahbingfncglipdeif).
 
 <!--more-->
 
-I've found myself frequently copy-pasting queries between different chatbots. [Chorus](https://chromewebstore.google.com/detail/chorus-compare-llms/opedkjbjehljdkjahbingfncglipdeif) is a Chrome extension that automates this. You can type `ch` `Space` in the omnibar, write your prompt, and hit `Enter`. Chorus will create a tab group and send your prompt to all the enabled models.
+I've found myself frequently copy-pasting queries between different chatbots. [Chorus](https://chromewebstore.google.com/detail/chorus-compare-llms/opedkjbjehljdkjahbingfncglipdeif) automates this. You can type `ch` `Space` in the omnibar, write your prompt, and hit `Enter`. Chorus will create a tab group and send your prompt to all the enabled models.
 
 ![Chorus demo](/assets/chorus.gif)
 
@@ -22,4 +22,4 @@ I've found the omnibar-based workflow to be snappy for quick queries, but it's a
 
 I also realized that none of the top LLM web apps properly support URL parameters, so I had to hack some content scripts that simulate typing and clicking on the page. It'd be great if the LLM providers could support something like `url/?q=prompt&model=name`.
 
-The code lives in this [GitHub repo](https://github.com/rishicomplex/chorus). Contributions are welcome!
+The code lives in this [GitHub repo](https://github.com/rishicomplex/chorus). Feedback and contributions are welcome!
