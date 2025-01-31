@@ -7,4 +7,4 @@ I'm a researcher working on getting LLMs to reason via reinforcement learning at
 
 Previously, I worked on improving Google's search ranking algorithm with deep learning.
 
-You can reach me at [rishicomplex@gmail.com](mailto:rishicomplex@gmail.com).
+You can find me on [X](https://x.com/rishicomplex), or email me at [rishicomplex@gmail.com](mailto:rishicomplex@gmail.com).
