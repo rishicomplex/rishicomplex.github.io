@@ -20,8 +20,8 @@
 
 title: rishimehta.xyz
 email: rishicomplex@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  blog
+# description: >- # this means to ignore newlines until "baseurl:"
+#   Rishi's blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: rishicomplex
@@ -56,3 +56,5 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+title_separator: " | "
