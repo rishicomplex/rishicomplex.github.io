@@ -10,7 +10,7 @@ Last week, I had the chance to spend a morning with a group from the [Hadzabe tr
 
 This was a group of roughly 20 Hadza. Our guide was an ex-member of the tribe, who said he'd been taken from the tribe at a young age by a Spanish couple and attended English schools. 
 
-When we came upon the group, the men had just finished a successful hunt, having killed an impala. They were sitting in purposeful clusters, harvesting the impala's carcass. Its head had been mounted in the wedge of a tree. One group was roasting its meat over flames. Another group was stretching its hide to dry for future clothing. Yet another group was meticulously extracting tendons from its bones to use as cordage.
+When we came upon the group, the men had just finished a successful hunt, having killed an impala. They were sitting in clusters, harvesting the impala's carcass. Its head had been mounted in the wedge of a tree. One group was roasting its meat over flames. Another group was stretching its hide to dry for future clothing. Yet another group was meticulously extracting tendons from its bones to use as cordage.
 
 <br />
 
