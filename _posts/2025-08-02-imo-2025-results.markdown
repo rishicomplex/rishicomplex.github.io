@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "IMO 2025 Results"
+date:   2025-08-02 00:00:00 -0800
+---
+
+The 2025 International Mathematical Olympiad (IMO) has concluded, and the results are in. This year's competition was held in [location], bringing together the world's brightest young mathematicians.
+
+<!--more-->
+
+Things to cover:
+* Commentary on results
+* Impressions re each result
+* How humans did
+* IMO Grand challenge & what it means
+* My predictions for the future
+* Nature of AI research
