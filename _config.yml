@@ -23,7 +23,7 @@ email: rishicomplex@gmail.com
 # description: >- # this means to ignore newlines until "baseurl:"
 #   Rishi's blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://rishimehta.xyz" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: rishicomplex
 github_username:  rishicomplex
 google_analytics: G-XQHN93VF9Q
