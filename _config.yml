@@ -28,6 +28,12 @@ twitter_username: rishicomplex
 github_username:  rishicomplex
 google_analytics: G-XQHN93VF9Q
 
+# Social defaults
+logo: /assets/comic.jpg # used by jekyll-seo-tag for og:image/twitter:image
+twitter:
+  username: rishicomplex
+  card: summary_large_image
+
 # Build settings
 theme: minima
 show_excerpts: true
@@ -35,6 +41,7 @@ excerpt_separator: "<!--more-->"
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 
 # Exclude from processing.

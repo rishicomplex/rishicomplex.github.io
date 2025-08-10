@@ -2,6 +2,7 @@
 layout: post
 title:  "The 2025 International Mathematical Olympiad"
 date:   2025-08-09 00:00:00 -0800
+image:  /assets/imo-2025-header.png
 ---
 
 IMO 2025 just finished. A bunch of AI models gave it a shot this year. Here's my take on the results.
@@ -22,7 +23,9 @@ The IMO Grand Challenge fell this year.<sup><a href="#footnote1">1</a></sup> Bot
 
 I spent almost 2 years at Google DeepMind working on this problem, culminating in us announcing [AlphaProof](https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/) after IMO 2024. Together with [AlphaGeometry](https://deepmind.google/discover/blog/alphageometry-an-olympiad-level-ai-system-for-geometry/), it got to silver medal performance, missing gold by one point. This came as quite a shock to both the AI and math communities.
 
-![Manifold prediction market showing the predicted probability of AI achieving IMO gold medal by 2025](/assets/manifold.png)
+<div style="padding: 20px; text-align: center;">
+<img src="/assets/manifold.png" alt="Manifold prediction market showing the predicted probability of AI achieving IMO gold medal by 2025" style="max-width: 100%; height: auto; border-radius: 8px;">
+</div>
 
 There were a few reasons why this didn't constitute beating the IMO Grand Challenge:
 1. The system didn't get a gold medal.
