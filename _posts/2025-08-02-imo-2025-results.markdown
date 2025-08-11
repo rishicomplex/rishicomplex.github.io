@@ -34,7 +34,7 @@ There were a few reasons why this didn't constitute beating the IMO Grand Challe
 
 It felt like we'd come _very_ close though.
 
-Re (1), we missed a gold medal by 1 point. There are 6 problems worth 7 points each — the system got 28 points, and the gold cutoff that year was 29. This was despite it being an unlucky topic distribution relative to the system's strengths. The system was weakest at combinatorics, and the two problems AlphaProof didn't solve (P3 and P5) were combinatorics problems. Historically, the there's been two combinatorics problems less than half the time.
+Re (1), we missed a gold medal by 1 point. There are 6 problems worth 7 points each — the system got 28 points, and the gold cutoff that year was 29. This was despite it being an unlucky topic distribution relative to the system's strengths. The system was weakest at combinatorics, and the two problems AlphaProof didn't solve (P3 and P5) were combinatorics problems. Historically, there's been two combinatorics problems less than half the time.
 
 Re (2), this could be fixed with some more work. And re (3), for the problems AlphaProof had solved, the system could also successfully autoformalize them (though this wasn't used in the competition setting).
 
