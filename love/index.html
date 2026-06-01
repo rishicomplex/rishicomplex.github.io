@@ -7,14 +7,14 @@
 <title>&#9825;</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500;1,600&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <style>
   :root { --ink: #6b3f4a; --soft: #9b6b76; }
   * { box-sizing: border-box; }
   html, body { height: 100%; margin: 0; }
   body {
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Cormorant", Georgia, serif;
     color: var(--ink);
     display: flex; align-items: center; justify-content: center;
     text-align: center; padding: 24px;
@@ -57,15 +57,17 @@
   #app { display: none; }
   #app.show { display: block; }
   .prefix {
-    font-size: clamp(1.5rem, 4.5vw, 2.4rem);
-    color: var(--soft); letter-spacing: .01em; margin-bottom: .35em;
+    font-family: "Cormorant", Georgia, serif;
+    font-style: italic; font-weight: 500;
+    font-size: clamp(1.6rem, 4.8vw, 2.6rem);
+    color: var(--soft); letter-spacing: .03em; margin-bottom: .4em;
   }
   .stage { perspective: 1100px; min-height: clamp(4rem, 22vw, 9rem); display: flex; align-items: center; justify-content: center; }
   .reason {
-    font-family: "Playfair Display", "Cormorant Garamond", serif;
-    font-style: italic; font-weight: 600;
-    font-size: clamp(2.1rem, 8vw, 4.4rem); line-height: 1.15;
-    color: var(--ink);
+    font-family: "Playfair Display", "Cormorant", serif;
+    font-style: italic; font-weight: 500;
+    font-size: clamp(2.2rem, 8vw, 4.6rem); line-height: 1.18;
+    letter-spacing: .005em; color: var(--ink);
     transform-origin: 50% 50%;
     transform: rotateX(-92deg); opacity: 0;
     transition: transform .7s cubic-bezier(.2,.85,.25,1), opacity .55s ease, filter .7s ease;
@@ -101,7 +103,7 @@
     </div>
 
     <div id="app">
-      <div class="prefix">I love you because&hellip;</div>
+      <div class="prefix">Rishi loves you because&hellip;</div>
       <div class="stage"><div id="reason" class="reason"></div></div>
       <div class="sig">&#9825;</div>
     </div>
