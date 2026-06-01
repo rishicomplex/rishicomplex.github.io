@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>&#9825;</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500;1,600&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>
+  :root { --ink: #6b3f4a; --soft: #9b6b76; }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    color: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 24px;
+    overflow: hidden; position: relative;
+    background: linear-gradient(135deg, #fff6f4, #ffe6ec, #ffd9e6, #ffe9da);
+    background-size: 400% 400%;
+    animation: drift 22s ease infinite;
+  }
+  @keyframes drift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* floating hearts */
+  .hearts { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0; }
+  .hearts span {
+    position: absolute; bottom: -40px;
+    font-size: var(--s, 18px); color: #ff9bb3; opacity: 0;
+    animation: rise var(--d, 14s) linear infinite;
+    animation-delay: var(--delay, 0s);
+  }
+  @keyframes rise {
+    0%   { transform: translateY(0) scale(.6) rotate(0deg);   opacity: 0; }
+    10%  { opacity: .55; }
+    90%  { opacity: .35; }
+    100% { transform: translateY(-112vh) scale(1) rotate(40deg); opacity: 0; }
+  }
+
+  .wrap { position: relative; z-index: 1; max-width: 760px; width: 100%; }
+
+  /* sign-in gate */
+  #gate { opacity: 0; transition: opacity .5s ease; }
+  #gate.show { opacity: 1; }
+  #gate .hello { font-size: clamp(1.4rem, 5vw, 2rem); font-style: italic; color: var(--soft); margin-bottom: 22px; }
+  #gbtn { display: inline-block; }
+  #err { margin-top: 16px; color: #c25b74; min-height: 1.2em; font-size: 1rem; }
+
+  /* the reasons view */
+  #app { display: none; }
+  #app.show { display: block; }
+  .prefix {
+    font-size: clamp(1.5rem, 4.5vw, 2.4rem);
+    color: var(--soft); letter-spacing: .01em; margin-bottom: .35em;
+  }
+  .stage { perspective: 1100px; min-height: clamp(4rem, 22vw, 9rem); display: flex; align-items: center; justify-content: center; }
+  .reason {
+    font-family: "Playfair Display", "Cormorant Garamond", serif;
+    font-style: italic; font-weight: 600;
+    font-size: clamp(2.1rem, 8vw, 4.4rem); line-height: 1.15;
+    color: var(--ink);
+    transform-origin: 50% 50%;
+    transform: rotateX(-92deg); opacity: 0;
+    transition: transform .7s cubic-bezier(.2,.85,.25,1), opacity .55s ease, filter .7s ease;
+    filter: blur(6px); will-change: transform, opacity;
+  }
+  .reason.in  { transform: rotateX(0deg);  opacity: 1; filter: blur(0); }
+  .reason.out { transform: rotateX(92deg); opacity: 0; filter: blur(6px); }
+
+  .sig { margin-top: 1.6em; font-size: 1.5rem; color: #e2799a; opacity: .7; animation: beat 2.4s ease-in-out infinite; }
+  @keyframes beat { 0%,100%{ transform: scale(1);} 15%{ transform: scale(1.18);} 30%{ transform: scale(1);} }
+
+  @media (prefers-reduced-motion: reduce) {
+    body, .hearts span, .sig { animation: none; }
+    .reason { transition: opacity .4s ease; transform: none; filter: none; }
+    .reason.out { transform: none; }
+  }
+</style>
+</head>
+<body>
+  <!-- ===== CONFIG ===== -->
+  <script>
+    const WORKER_URL = "https://love.rishimehta.workers.dev";              // from `wrangler deploy`
+    const CLIENT_ID  = "311040284822-1go9ufaitbse9heid8loj5cjmhq6cnos.apps.googleusercontent.com";  // from Google Cloud Console
+  </script>
+
+  <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <div id="gate">
+      <div class="hello">just for you &#9825;</div>
+      <div id="gbtn"></div>
+      <div id="err"></div>
+    </div>
+
+    <div id="app">
+      <div class="prefix">I love you because&hellip;</div>
+      <div class="stage"><div id="reason" class="reason"></div></div>
+      <div class="sig">&#9825;</div>
+    </div>
+  </div>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+
+  // sprinkle some drifting hearts
+  (function makeHearts() {
+    const layer = $("hearts");
+    const glyphs = ["♡", "♥", "✿"];
+    for (let i = 0; i < 14; i++) {
+      const s = document.createElement("span");
+      s.textContent = glyphs[i % glyphs.length];
+      s.style.left = (Math.random() * 100) + "%";
+      s.style.setProperty("--s", (12 + Math.random() * 26) + "px");
+      s.style.setProperty("--d", (11 + Math.random() * 12) + "s");
+      s.style.setProperty("--delay", (-Math.random() * 18) + "s");
+      layer.appendChild(s);
+    }
+  })();
+
+  async function callWorker(payload) {
+    try {
+      const res = await fetch(WORKER_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json().catch(() => ({}));
+      return { ok: res.ok, data };
+    } catch (e) {
+      return { ok: false, data: { error: "network error" } };
+    }
+  }
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function start(reasons) {
+    $("gate").classList.remove("show");
+    $("gate").style.display = "none";
+    $("app").classList.add("show");
+    const el = $("reason");
+    let queue = shuffle(reasons), i = 0;
+
+    function next() {
+      if (i >= queue.length) { queue = shuffle(reasons); i = 0; }
+      return queue[i++];
+    }
+    function flipIn() {
+      el.textContent = next();
+      el.classList.remove("out");
+      void el.offsetWidth;           // reflow so the transition replays
+      el.classList.add("in");
+    }
+    function cycle() {
+      el.classList.remove("in");
+      el.classList.add("out");       // flip current one out
+      setTimeout(flipIn, 700);       // swap + flip the next one in
+    }
+
+    flipIn();
+    // ~3s per reason (visible ~2.3s + ~0.7s flip)
+    setInterval(cycle, 3000);
+  }
+
+  async function onGoogleCredential(response) {
+    $("err").textContent = "";
+    const { ok, data } = await callWorker({ googleToken: response.credential });
+    if (ok && data.reasons) {
+      if (data.token) localStorage.setItem("love_token", data.token);
+      localStorage.setItem("love_reasons", JSON.stringify(data.reasons));
+      start(data.reasons);
+    } else {
+      $("err").textContent = data.error || "Hmm, that didn't work.";
+    }
+  }
+
+  async function tryStoredToken() {
+    const token = localStorage.getItem("love_token");
+    if (!token) return false;
+    const { ok, data } = await callWorker({ token });
+    if (ok && data.reasons) { start(data.reasons); return true; }
+    localStorage.removeItem("love_token");
+    return false;
+  }
+
+  function waitForGoogle(cb, tries = 0) {
+    if (window.google && google.accounts && google.accounts.id) return cb();
+    if (tries > 100) { $("err").textContent = "Couldn't load Google sign-in."; return; }
+    setTimeout(() => waitForGoogle(cb, tries + 1), 50);
+  }
+
+  function showSignIn() {
+    waitForGoogle(() => {
+      google.accounts.id.initialize({
+        client_id: CLIENT_ID,
+        callback: onGoogleCredential,
+        auto_select: true,
+      });
+      google.accounts.id.renderButton($("gbtn"), {
+        theme: "filled_blue", size: "large", type: "standard",
+        text: "continue_with", shape: "pill",
+      });
+      google.accounts.id.prompt();
+      $("gate").classList.add("show");
+    });
+  }
+
+  (async function init() {
+    if (await tryStoredToken()) return;
+    showSignIn();
+  })();
+</script>
+</body>
+</html>
