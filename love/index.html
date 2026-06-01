@@ -7,14 +7,14 @@
 <title>&#9825;</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <style>
   :root { --ink: #6b3f4a; --soft: #9b6b76; }
   * { box-sizing: border-box; }
   html, body { height: 100%; margin: 0; }
   body {
-    font-family: "Cormorant", Georgia, serif;
+    font-family: "Inter", -apple-system, system-ui, sans-serif;
     color: var(--ink);
     display: flex; align-items: center; justify-content: center;
     text-align: center; padding: 24px;
@@ -57,17 +57,16 @@
   #app { display: none; }
   #app.show { display: block; }
   .prefix {
-    font-family: "Cormorant", Georgia, serif;
-    font-style: italic; font-weight: 500;
-    font-size: clamp(1.6rem, 4.8vw, 2.6rem);
-    color: var(--soft); letter-spacing: .03em; margin-bottom: .4em;
+    font-weight: 400;
+    font-size: clamp(1.1rem, 3.4vw, 1.6rem);
+    color: var(--soft); letter-spacing: .14em; text-transform: uppercase;
+    margin-bottom: .7em;
   }
   .stage { perspective: 1100px; min-height: clamp(4rem, 22vw, 9rem); display: flex; align-items: center; justify-content: center; }
   .reason {
-    font-family: "Playfair Display", "Cormorant", serif;
-    font-style: italic; font-weight: 500;
-    font-size: clamp(2.2rem, 8vw, 4.6rem); line-height: 1.18;
-    letter-spacing: .005em; color: var(--ink);
+    font-weight: 600;
+    font-size: clamp(2rem, 7vw, 4rem); line-height: 1.2;
+    letter-spacing: -.02em; color: var(--ink);
     transform-origin: 50% 50%;
     transform: rotateX(-92deg); opacity: 0;
     transition: transform .7s cubic-bezier(.2,.85,.25,1), opacity .55s ease, filter .7s ease;
